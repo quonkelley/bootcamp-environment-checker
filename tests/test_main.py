@@ -34,9 +34,7 @@ def test_is_command_available_returns_false_for_missing_command() -> None:
 
 
 def test_get_tool_status_returns_status_for_each_command() -> None:
-    statuses = get_tool_status(
-        ["git", "command_that_should_not_exist_12345"]
-    )
+    statuses = get_tool_status(["git", "command_that_should_not_exist_12345"])
 
     assert statuses == {
         "git": True,

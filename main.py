@@ -19,10 +19,7 @@ def get_operating_system() -> str:
 
 
 def get_tool_status(commands: list[str]) -> dict[str, bool]:
-    return {
-        command: is_command_available(command)
-        for command in commands
-    }
+    return {command: is_command_available(command) for command in commands}
 
 
 def main() -> None:
